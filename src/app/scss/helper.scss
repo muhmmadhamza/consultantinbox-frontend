@@ -1,0 +1,84 @@
+@mixin flex-w {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @mixin flex-c {
+    display: flex;
+    align-items: center;
+  }
+  @mixin flex-c-c {
+    @include flex-c;
+    justify-content: center;
+  }
+  @mixin flex-c-sb {
+    @include flex-c;
+    justify-content: space-between;
+  }
+  @mixin flex-sb {
+    display: flex;
+    justify-content: space-between;
+  }
+  // Absolute poisitioning
+  @mixin position($abs-position) {
+    position: absolute;
+    @if $abs-position == vertical {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @if $abs-position == horizontal {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @if $abs-position == both {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  // Resuable icon
+  @mixin svgIcon($image-name, $width, $height) {
+    display: block;
+    content: "";
+    background-image: url("../webimages/icons/#{$image-name}.svg");
+    background-size: #{$width}px #{$height}px;
+    background-repeat: no-repeat;
+    width: #{$width}px;
+    height: #{$height}px;
+  }
+  // List item
+  @mixin list-element($gap, $space-top, $column) {
+    @include flex-w;
+    margin-left: -#{$gap};
+    margin-top: -#{$space-top};
+    @include max-breakpoints(mobile) {
+      margin-left: 0;
+    }
+    > * {
+      padding-left: #{$gap};
+      padding-top: #{$space-top};
+      width: calc(100% / #{$column});
+      @include max-breakpoints(mobile) {
+        padding-left: 0;
+      }
+    }
+  }
+  
+  // Arrow Animation
+  @keyframes arrowAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    50% {
+      transform: translateX(calc(50% + 10px));
+    }
+  
+    51% {
+      transform: translateX(calc(-50% - 10px));
+    }
+  
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  

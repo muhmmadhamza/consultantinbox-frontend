@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@mixin Roboto-Light {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+@mixin Roboto-Regular {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+@mixin Roboto-meduim {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+@mixin Roboto-bold {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin Poppins-Regular {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin Poppins-meduim {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+@mixin Poppins-semi-blod {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+@mixin Poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+@mixin Poppins-extra-bold {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+}
+
+@mixin Rubik-Regular {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+@mixin Rubik-Meduim {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+@mixin Rubik-Semi-bold {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+@mixin Rubik-bold {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+@mixin Inter-small {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+@mixin Inter-Regular {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+@mixin Inter-meduim {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+@mixin Inter-semi-bold {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+@mixin Inter-bold {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin Heading {
+    font-size: 45px;
+    line-height: 58px;
+    @include Poppins-bold();
+    @include max-breakpoints(notebook){
+        font-size: 30px;
+    }
+    @include max-breakpoints(mobile){
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,93 @@
+// @mixin sm {
+//     @media only screen and (min-width: 540px) {
+//         @content;
+//     }
+// }
+
+// @mixin mb {
+//     @media only screen and (min-width: 768px) {
+//         @content;
+//     }
+// }
+// @mixin md {
+//     @media only screen and (min-width: 992px) {
+//         @content;
+//     }
+// }
+// @mixin lg {
+//     @media only screen and (min-width: 1024px) {
+//         @content;
+//     }
+// }
+
+// @mixin xl {
+//     @media only screen and (min-width: 1280px) {
+//         @content;
+//     }
+// }
+
+// @mixin xxl {
+//     @media only screen and (min-width: 1536px) {
+//         @content;
+//     }
+// }
+
+// @mixin ellipsis($line: 2) {
+//     display: -webkit-box;
+//     -webkit-line-clamp: $line;
+//     -webkit-box-orient: vertical;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
+/*
+
+0 - 600px:       Mobile Phone
+601 - 767px:     Tablet Small
+768px - 1023px:  Tablet
+1024px - 1200px: Notebook
+
+[1200 - 1800] is where our normal styles apply
+
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- mobile
+- tablet-small
+- tablet
+- notebook
+- big-desktop
+
+*/
+@mixin max-breakpoints($breakpoint) {
+    @if $breakpoint == mobile {
+      @media only screen and (max-width: 600px) {
+        @content;
+      }
+    }
+    @if $breakpoint == tablet-small {
+      @media only screen and (max-width: 767px) {
+        @content;
+      }
+    }
+    @if $breakpoint == tablet {
+      @media only screen and (max-width: 991px) {
+        @content;
+      }
+    }
+    @if $breakpoint == desktop {
+      @media only screen and (max-width: 1023px) {
+        @content;
+      }
+    }
+    @if $breakpoint == notebook {
+      @media only screen and (max-width: 1200px) {
+        @content;
+      }
+    }
+    @if $breakpoint == big-desktop {
+      @media only screen and (max-width: 1400px) {
+        @content;
+      }
+    }
+  }
+  
